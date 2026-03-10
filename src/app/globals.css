@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-serif: var(--font-serif), "Cormorant Garamond", serif;
+  --font-sans: var(--font-sans), "Jost", sans-serif;
+
+  --color-background: #FFFFFF;
+  --color-foreground: #000000;
+  
+  --color-zinc-100: #F9F9F9;
+  --color-zinc-200: #EAEAEA;
+  --color-zinc-500: #767676;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  body {
+    @apply bg-white text-black antialiased selection:bg-black selection:text-white font-sans text-base leading-relaxed;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-normal tracking-tight;
+  }
+
+  hr {
+    @apply border-zinc-200;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Sotheby's Strict Primary Button */
+  .btn-primary {
+    @apply bg-black text-white px-8 py-3 text-sm font-sans font-medium uppercase tracking-[0.15em] rounded-none hover:bg-zinc-800 transition-colors duration-300;
+  }
+
+  /* Sotheby's Strict Secondary Button */
+  .btn-secondary {
+    @apply border border-black bg-white text-black px-8 py-3 text-sm font-sans font-medium uppercase tracking-[0.15em] rounded-none hover:bg-zinc-100 transition-colors duration-300;
+  }
+
+  /* Sotheby's Meta Label Style (The Overline) - MIN 12px (text-xs) */
+  .meta-label {
+    @apply font-sans text-xs md:text-sm uppercase tracking-[0.15em] text-[#767676] font-medium leading-none;
+  }
+
+  /* Navigation Link Style */
+  .nav-link {
+    @apply font-sans text-sm uppercase tracking-[0.1em] text-[#767676] hover:text-black transition-colors duration-300 font-medium;
+  }
+
+  /* Editorial Input Style */
+  .editorial-input {
+    @apply w-full border-b border-[#EAEAEA] py-3 text-lg font-sans placeholder:text-[#767676] focus:border-black focus:outline-none bg-transparent rounded-none transition-colors duration-300;
+  }
 }
