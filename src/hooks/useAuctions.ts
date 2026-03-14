@@ -1,7 +1,12 @@
 "use client";
 
-import { useQuery } from "@tanstack/react-query";
-import { getAuctions, getAuctionById } from "@/services/auction.service";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import {
+  getAuctions,
+  getAuctionById,
+  getCategories,
+  consignLot,
+} from "@/services/auction.service";
 
 export function useAuctions() {
   const { data, error, isLoading, refetch } = useQuery({
@@ -10,7 +15,7 @@ export function useAuctions() {
   });
 
   return {
-    auctions: data || [],
+    auctions: (data as any[]) || [],
     isLoading,
     isError: error,
     mutate: refetch,
@@ -30,4 +35,22 @@ export function useAuction(id: string) {
     isError: error,
     mutate: refetch,
   };
+}
+
+export function useCategories() {
+  return useQuery({
+    queryKey: ["categories"],
+    queryFn: getCategories,
+  });
+}
+
+export function useConsignMutation() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (formData: FormData) => consignLot(formData),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["auctions"] });
+    },
+  });
 }

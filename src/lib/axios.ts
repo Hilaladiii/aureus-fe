@@ -1,4 +1,5 @@
 import axios from "axios";
+import Cookies from "js-cookie";
 
 const apiClient = axios.create({
   baseURL: "http://localhost:8000/api/v1",
@@ -9,8 +10,9 @@ const apiClient = axios.create({
 
 apiClient.interceptors.request.use(
   (config) => {
-    const token =
-      typeof window !== "undefined" ? localStorage.getItem("token") : null;
+    // js-cookie safely returns undefined if not in a browser environment
+    const token = Cookies.get("token");
+    
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }

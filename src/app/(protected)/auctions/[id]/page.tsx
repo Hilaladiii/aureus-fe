@@ -66,8 +66,8 @@ export default function AuctionDetailPage() {
       <div className="min-h-screen flex items-center justify-center bg-white px-6">
         <div className="text-center max-w-lg space-y-8">
            <span className="meta-label text-amber-600">Access Restricted</span>
-           <h1 className="text-5xl font-serif text-black leading-tight italic font-normal tracking-tight">Lot Not Found.</h1>
-           <p className="text-lg text-zinc-400 italic">The catalog item you requested is no longer available for exhibition.</p>
+           <h1 className="text-5xl font-serif text-black leading-tight font-normal tracking-tight">Lot Not Found.</h1>
+           <p className="text-lg text-zinc-400">The catalog item you requested is no longer available for exhibition.</p>
            <Link href="/auctions" className="btn-primary inline-flex">Return to Gallery</Link>
         </div>
       </div>
@@ -101,7 +101,7 @@ export default function AuctionDetailPage() {
             <div className="flex flex-col gap-6 md:gap-8 max-w-2xl">
                <div className="flex flex-col gap-2">
                   <h3 className="meta-label text-black">Exhibition Notes</h3>
-                  <p className="text-lg md:text-xl text-[#767676] font-normal leading-relaxed italic tracking-tight font-sans">
+                  <p className="text-lg md:text-xl text-[#767676] font-normal leading-relaxed tracking-tight font-sans">
                     {auction.description}
                   </p>
                </div>
@@ -111,13 +111,13 @@ export default function AuctionDetailPage() {
                <div className="grid grid-cols-2 gap-12">
                   <div className="flex flex-col gap-2">
                     <span className="meta-label text-zinc-400">Provenance / Seller</span>
-                    <span className="text-lg font-serif italic text-black underline underline-offset-4 decoration-[#EAEAEA] font-normal">
+                    <span className="text-lg font-serif text-black underline underline-offset-4 decoration-[#EAEAEA] font-normal">
                       {auction.seller.username}
                     </span>
                   </div>
                   <div className="flex flex-col gap-2">
                     <span className="meta-label text-zinc-400">Status</span>
-                    <span className="text-base font-sans font-medium uppercase tracking-[0.1em] text-black italic">
+                    <span className="text-base font-sans font-medium uppercase tracking-[0.1em] text-black">
                       Institutional Grade
                     </span>
                   </div>
@@ -129,7 +129,7 @@ export default function AuctionDetailPage() {
           <div className="lg:col-span-5 flex flex-col gap-12 md:gap-16">
             <div className="flex flex-col gap-4">
                <span className="meta-label">Category: {auction.category}</span>
-               <h1 className="text-5xl md:text-6xl font-serif text-black leading-none italic font-normal tracking-tight">
+               <h1 className="text-5xl md:text-6xl font-serif text-black leading-none font-normal tracking-tight">
                  {auction.title}
                </h1>
             </div>
@@ -160,25 +160,25 @@ export default function AuctionDetailPage() {
                   <div className="flex flex-col gap-6">
                     <div className="flex justify-between items-center px-1">
                        <label className="meta-label text-black">Your Official Entry</label>
-                       <span className="text-xs text-[#767676] italic font-sans font-normal uppercase tracking-widest">
+                       <span className="text-xs text-[#767676] font-sans font-normal uppercase tracking-widest">
                          Min Incr: {currencyFormatter.format(auction.increment)}
                        </span>
                     </div>
                     
                     <div className="relative">
-                       <span className="absolute left-0 top-1/2 -translate-y-1/2 font-serif text-3xl text-zinc-300 italic font-normal">$</span>
+                       <span className="absolute left-0 top-1/2 -translate-y-1/2 font-serif text-3xl text-zinc-300 font-normal">$</span>
                        <input 
                          {...register("amount")}
                          type="number" 
                          placeholder={(highestBid + auction.increment).toString()}
-                         className="editorial-input pl-8 text-3xl font-serif italic font-normal"
+                         className="editorial-input pl-8 text-3xl font-serif font-normal"
                        />
                     </div>
                     {errors.amount && (
-                      <p className="meta-label text-zinc-400 mt-2 lowercase italic normal-case tracking-normal">{errors.amount.message}</p>
+                      <p className="meta-label text-zinc-400 mt-2 lowercase normal-case tracking-normal">{errors.amount.message}</p>
                     )}
                     {bidError && (
-                       <div className="p-6 border border-zinc-100 bg-zinc-50 text-zinc-950 text-[11px] font-medium uppercase tracking-[0.1em] flex items-center justify-center text-center italic">
+                       <div className="p-6 border border-zinc-100 bg-zinc-50 text-zinc-950 text-[11px] font-medium uppercase tracking-[0.1em] flex items-center justify-center text-center">
                          {bidError}
                        </div>
                     )}
@@ -220,7 +220,7 @@ export default function AuctionDetailPage() {
                     >
                        <div className="flex flex-col gap-1">
                           <span className="meta-label text-[10px] text-zinc-300">Bidder Handle</span>
-                          <span className="text-lg font-serif italic text-black group-hover:underline underline-offset-4 decoration-1 transition-all duration-500 font-normal">
+                          <span className="text-lg font-serif text-black group-hover:underline underline-offset-4 decoration-1 transition-all duration-500 font-normal">
                             {bid.bidderName}
                             {idx === 0 && <span className="ml-3 text-[9px] font-sans font-medium uppercase tracking-[0.15em] bg-black text-white px-2 py-0.5 align-middle">Leading</span>}
                           </span>
@@ -232,10 +232,10 @@ export default function AuctionDetailPage() {
                     </div>
                   )) : (
                     <div className="py-24 text-center border-y border-dashed border-[#EAEAEA]">
-                       <span className="meta-label text-zinc-200 italic font-serif lowercase normal-case text-lg">Ledger Entry Empty</span>
+                       <span className="meta-label text-zinc-200 font-serif lowercase normal-case text-lg">Ledger Entry Empty</span>
                     </div>
                   )}
-                  {sseError && <p className="meta-label text-zinc-400 mt-6 italic text-center lowercase normal-case tracking-normal">{sseError}</p>}
+                  {sseError && <p className="meta-label text-zinc-400 mt-6 text-center lowercase normal-case tracking-normal">{sseError}</p>}
                </div>
             </div>
           </div>

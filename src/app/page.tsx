@@ -32,12 +32,12 @@ export default function Home() {
               <span className="meta-label">Inaugural Private Collection</span>
               <h1 className="text-6xl md:text-8xl lg:text-[100px] font-serif font-normal tracking-tight leading-[0.9] text-black">
                 The Heritage <br /> 
-                <span className="italic font-normal">Exhibition.</span>
+                <span className="font-normal">Exhibition.</span>
               </h1>
             </div>
             
             <div className="max-w-2xl flex flex-col gap-8">
-              <p className="text-lg md:text-xl text-[#767676] font-normal leading-relaxed tracking-tight font-sans italic">
+              <p className="text-lg md:text-xl text-[#767676] font-normal leading-relaxed tracking-tight font-sans">
                 An extraordinary collection of curated digital and physical assets from global estates. 
                 Driven by provenance, heritage, and the search for the inimitable.
               </p>
@@ -63,7 +63,7 @@ export default function Home() {
             />
             <div className="absolute top-6 left-6 flex flex-col gap-1">
                <span className="meta-label text-white mix-blend-difference">Catalogue Item 001</span>
-               <span className="font-serif text-white mix-blend-difference text-xl italic font-normal underline underline-offset-4 decoration-1">The Obsidian Sanctuary</span>
+               <span className="font-serif text-white mix-blend-difference text-xl font-normal underline underline-offset-4 decoration-1">The Obsidian Sanctuary</span>
             </div>
           </div>
         </section>
@@ -95,7 +95,7 @@ export default function Home() {
                       <span className="meta-label">{item.lot}</span>
                       <span className="meta-label text-zinc-300">Verified Origin</span>
                    </div>
-                   <h3 className="text-2xl md:text-3xl font-serif italic font-normal text-black group-hover:underline underline-offset-4 decoration-1 transition-all duration-500">{item.title}</h3>
+                   <h3 className="text-2xl md:text-3xl font-serif font-normal text-black group-hover:underline underline-offset-4 decoration-1 transition-all duration-500">{item.title}</h3>
                    <div>
                       <span className="font-serif text-xl md:text-2xl font-normal">{item.price}</span>
                    </div>
@@ -125,7 +125,7 @@ export default function Home() {
               <span className="w-2 h-2 bg-black rounded-none animate-pulse" />
               <span className="meta-label text-black">Aureus Exchange / Real-Time Feed Active</span>
               <div className="hidden md:block h-4 w-px bg-[#EAEAEA] mx-2" />
-              <span className="font-serif text-lg md:text-xl italic text-[#767676] font-normal">Global valuation update in progress...</span>
+              <span className="font-serif text-lg md:text-xl text-[#767676] font-normal">Global valuation update in progress...</span>
            </div>
         </section>
 

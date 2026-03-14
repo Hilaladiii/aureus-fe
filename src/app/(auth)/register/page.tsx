@@ -8,7 +8,7 @@ export default function RegisterPage() {
       title={
         <>
           Request Your <br />
-          <span className="italic font-normal">Membership.</span>
+          <span className="font-normal">Membership.</span>
         </>
       }
       subtitle="Institutional Enrollment Protocol"

@@ -75,9 +75,9 @@ export default function SellerDashboard() {
           <div className="flex flex-col gap-4 md:gap-6">
             <span className="meta-label">Consignor Atelier / Collector No. 420</span>
             <h1 className="text-6xl md:text-8xl font-serif text-black leading-none tracking-tight font-normal">
-              Seller <span className="italic font-normal">Dashboard.</span>
+              Seller <span className="font-normal">Dashboard.</span>
             </h1>
-            <p className="text-lg md:text-xl text-[#767676] max-w-2xl font-normal leading-relaxed italic tracking-tight font-sans">
+            <p className="text-lg md:text-xl text-[#767676] max-w-2xl font-normal leading-relaxed tracking-tight font-sans">
               Manage your private collection, monitor real-time bidding activity, 
               and oversee the provenance of your extraordinary assets.
             </p>
@@ -154,7 +154,7 @@ export default function SellerDashboard() {
                       </div>
                       <div className="flex flex-col gap-1 md:gap-2">
                          <span className="meta-label text-[10px] text-zinc-300">Lot {lot.id.padStart(3, '0')} / {lot.category}</span>
-                         <h3 className="text-xl md:text-2xl font-serif italic text-black group-hover:underline underline-offset-4 decoration-1 decoration-zinc-200 transition-all duration-500">{lot.title}</h3>
+                         <h3 className="text-xl md:text-2xl font-serif text-black group-hover:underline underline-offset-4 decoration-1 decoration-zinc-200 transition-all duration-500">{lot.title}</h3>
                       </div>
                    </div>
 
@@ -175,14 +175,14 @@ export default function SellerDashboard() {
                       <span className="meta-label text-[10px] text-zinc-300">Current Valuation</span>
                       <div className="flex flex-col gap-1">
                         <span className="text-xl font-serif text-black">{currencyFormatter.format(lot.currentBid)}</span>
-                        <span className="meta-label block text-[10px] opacity-40 italic lowercase normal-case tracking-normal">{lot.bids} entries Received</span>
+                        <span className="meta-label block text-[10px] opacity-40 lowercase normal-case tracking-normal">{lot.bids} entries Received</span>
                       </div>
                    </div>
 
                    {/* Time / Auction Context */}
                    <div className="lg:col-span-2 flex flex-col gap-2">
                       <span className="meta-label text-[10px] text-zinc-300">Time Remaining</span>
-                      <span className="text-sm md:text-base font-sans font-medium uppercase tracking-[0.1em] text-black italic">
+                      <span className="text-sm md:text-base font-sans font-medium uppercase tracking-[0.1em] text-black">
                         {lot.timeLeft}
                       </span>
                    </div>
@@ -198,8 +198,8 @@ export default function SellerDashboard() {
 
               {filteredLots.length === 0 && (
                 <div className="py-32 md:py-48 text-center border border-zinc-50 bg-[#F9F9F9]">
-                   <span className="meta-label italic font-serif lowercase normal-case text-2xl tracking-tight text-zinc-300">Atelier Ledger Empty</span>
-                   <p className="meta-label text-zinc-400 mt-4 italic lowercase normal-case tracking-normal">No lots found matching the current collection filter.</p>
+                   <span className="meta-label font-serif lowercase normal-case text-2xl tracking-tight text-zinc-300">Atelier Ledger Empty</span>
+                   <p className="meta-label text-zinc-400 mt-4 lowercase normal-case tracking-normal">No lots found matching the current collection filter.</p>
                 </div>
               )}
            </div>

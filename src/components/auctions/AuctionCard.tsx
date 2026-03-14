@@ -41,7 +41,7 @@ export default function AuctionCard({ auction }: AuctionCardProps) {
           <span className="meta-label text-[10px] text-zinc-400 font-medium tracking-[0.1em]">
             {auction.category} / {auction.seller.username}
           </span>
-          <h3 className="text-2xl font-serif text-black leading-tight group-hover:underline underline-offset-4 decoration-1 decoration-zinc-300 transition-all duration-500 italic font-normal">
+          <h3 className="text-2xl font-serif text-black leading-tight group-hover:underline underline-offset-4 decoration-1 decoration-zinc-300 transition-all duration-500 font-normal">
             {auction.title}
           </h3>
         </div>

@@ -26,6 +26,6 @@ export const getTransactions = async (): Promise<Transaction[]> => {
 };
 
 export const topUpWallet = async (data: { amount: number; method: string }) => {
-  const response = await apiClient.post("/wallet/topup", data);
+  const response = await apiClient.post("/wallet/top-up", data);
   return response.data;
 };

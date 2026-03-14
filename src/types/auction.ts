@@ -14,3 +14,19 @@ export interface Auction {
     verified: boolean;
   };
 }
+
+export type Category = {
+  id: string;
+  name: string;
+};
+
+export type AuctionCreateRequest = {
+  name: string;
+  description?: string;
+  startPrice: number;
+  bidIncrement: number;
+  startTime: Date;
+  endTime: Date;
+  categoryId: string;
+  images: File[];
+};

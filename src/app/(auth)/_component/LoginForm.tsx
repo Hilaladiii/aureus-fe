@@ -55,12 +55,12 @@ export function LoginForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-10">
       {message && (
-        <div className="p-6 border border-zinc-200 bg-zinc-50 text-zinc-950 text-[11px] font-medium uppercase tracking-widest flex items-center justify-center text-center italic">
+        <div className="p-6 border border-zinc-200 bg-zinc-50 text-zinc-950 text-[11px] font-medium uppercase tracking-widest flex items-center justify-center text-center">
           {message}
         </div>
       )}
       {success && (
-        <div className="p-6 border border-emerald-100 bg-emerald-50 text-emerald-950 text-[11px] font-medium uppercase tracking-widest flex items-center justify-center text-center italic">
+        <div className="p-6 border border-emerald-100 bg-emerald-50 text-emerald-950 text-[11px] font-medium uppercase tracking-widest flex items-center justify-center text-center">
           {success}
         </div>
       )}
@@ -78,7 +78,7 @@ export function LoginForm() {
             className="editorial-input px-1 font-normal"
           />
           {errors.email && (
-            <p className="meta-label text-zinc-400 mt-1 lowercase italic tracking-normal">
+            <p className="meta-label text-zinc-400 mt-1 lowercase tracking-normal">
               {errors.email.message}
             </p>
           )}
@@ -90,7 +90,7 @@ export function LoginForm() {
             <label className="meta-label text-black">Access Code</label>
             <Link 
               href="/forgot-password" 
-              className="meta-label text-zinc-400 hover:text-black transition-colors lowercase italic tracking-normal underline underline-offset-4 decoration-zinc-200"
+              className="meta-label text-zinc-400 hover:text-black transition-colors lowercase tracking-normal underline underline-offset-4 decoration-zinc-200"
             >
               recover?
             </Link>
@@ -102,7 +102,7 @@ export function LoginForm() {
             className="editorial-input px-1 font-normal"
           />
           {errors.password && (
-            <p className="meta-label text-zinc-400 mt-1 lowercase italic tracking-normal">
+            <p className="meta-label text-zinc-400 mt-1 lowercase tracking-normal">
               {errors.password.message}
             </p>
           )}

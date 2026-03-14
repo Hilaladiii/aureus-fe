@@ -7,7 +7,7 @@ export default function LoginPage() {
     <AuthPageWrapper
       title={
         <>
-          Sign In to <span className="italic font-normal">Your Vault.</span>
+          Sign In to <span className="font-normal">Your Vault.</span>
         </>
       }
       subtitle="Identity Verification Protocol"

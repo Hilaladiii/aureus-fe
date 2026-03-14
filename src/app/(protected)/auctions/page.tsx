@@ -25,9 +25,9 @@ export default function AuctionListingPage() {
               Curated Selection / 2026 Collection
             </span>
             <h1 className="text-6xl md:text-8xl font-serif text-black leading-none tracking-tight font-normal">
-              The Grand <span className="italic font-normal">Gallery.</span>
+              The Grand <span className="font-normal">Gallery.</span>
             </h1>
-            <p className="text-lg md:text-xl text-[#767676] max-w-2xl font-normal leading-relaxed italic tracking-tight font-sans">
+            <p className="text-lg md:text-xl text-[#767676] max-w-2xl font-normal leading-relaxed tracking-tight font-sans">
               A meticulously curated showcase of rare digital and physical
               assets, sourced from global collectors and verified for
               unparalleled provenance.
@@ -77,11 +77,11 @@ export default function AuctionListingPage() {
             <span className="meta-label text-amber-600">
               Protocol Interrupted
             </span>
-            <h3 className="text-4xl font-serif text-zinc-400 italic mt-6 font-normal">
+            <h3 className="text-4xl font-serif text-zinc-400 mt-6 font-normal">
               Vault access error.
             </h3>
             <hr className="w-16 mx-auto my-10 border-[#EAEAEA]" />
-            <p className="text-lg text-zinc-400 max-w-sm mx-auto italic font-sans font-normal leading-relaxed">
+            <p className="text-lg text-zinc-400 max-w-sm mx-auto font-sans font-normal leading-relaxed">
               {isError.message}
             </p>
           </div>
@@ -103,11 +103,11 @@ export default function AuctionListingPage() {
             <span className="meta-label text-zinc-300">
               Lot Inquiry Status: Empty
             </span>
-            <h3 className="text-4xl font-serif text-zinc-400 italic mt-6 font-normal">
+            <h3 className="text-4xl font-serif text-zinc-400 mt-6 font-normal">
               No items found in this section.
             </h3>
             <hr className="w-16 mx-auto my-10 border-[#EAEAEA]" />
-            <p className="text-lg text-zinc-400 max-w-sm mx-auto italic font-sans font-normal leading-relaxed">
+            <p className="text-lg text-zinc-400 max-w-sm mx-auto font-sans font-normal leading-relaxed">
               The gallery is currently being updated by our senior art
               directors. Please revisit shortly or contact the concierge.
             </p>

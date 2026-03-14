@@ -52,7 +52,7 @@ export function RegisterForm() {
       className="flex flex-col gap-10"
     >
       {message && (
-        <div className="p-6 border border-zinc-200 bg-zinc-50 text-zinc-950 text-[11px] font-medium uppercase tracking-widest flex items-center justify-center text-center italic">
+        <div className="p-6 border border-zinc-200 bg-zinc-50 text-zinc-950 text-[11px] font-medium uppercase tracking-widest flex items-center justify-center text-center">
           {message}
         </div>
       )}
@@ -95,7 +95,7 @@ export function RegisterForm() {
             className="editorial-input px-1 font-normal"
           />
           {errors.email && (
-            <p className="meta-label text-zinc-400 mt-1 lowercase italic tracking-normal">
+            <p className="meta-label text-zinc-400 mt-1 lowercase tracking-normal">
               {errors.email.message}
             </p>
           )}
@@ -113,7 +113,7 @@ export function RegisterForm() {
             className="editorial-input px-1 font-normal"
           />
           {errors.username && (
-            <p className="meta-label text-zinc-400 mt-1 lowercase italic tracking-normal">
+            <p className="meta-label text-zinc-400 mt-1 lowercase tracking-normal">
               {errors.username.message}
             </p>
           )}
@@ -129,7 +129,7 @@ export function RegisterForm() {
             className="editorial-input px-1 font-normal"
           />
           {errors.password && (
-            <p className="meta-label text-zinc-400 mt-1 lowercase italic tracking-normal">
+            <p className="meta-label text-zinc-400 mt-1 lowercase tracking-normal">
               {errors.password.message}
             </p>
           )}

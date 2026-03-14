@@ -1,5 +1,6 @@
 import apiClient from "@/lib/axios";
-import { Auction } from "@/types/auction";
+import { ApiResponse } from "@/types/api";
+import { Auction, Category } from "@/types/auction";
 
 export const getAuctions = async (): Promise<Auction[]> => {
   const response = await apiClient.get("/auctions");
@@ -12,6 +13,15 @@ export const getAuctionById = async (id: string): Promise<Auction> => {
 };
 
 export const consignLot = async (data: any) => {
-  const response = await apiClient.post("/auctions", data);
+  const response = await apiClient.post("/auctions", data, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
+  return response.data;
+};
+
+export const getCategories = async (): Promise<ApiResponse<Category[]>> => {
+  const response = await apiClient.get("/categories");
   return response.data;
 };
